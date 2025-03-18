@@ -77,6 +77,7 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
   }
 
   updated(changedProperties){
+    super.updated(changedProperties);
     if (changedProperties.has('org') || changedProperties.has('repo')){
       this.getData();
     }
@@ -102,8 +103,8 @@ getData() {
         html`
         <div class="rpg-wrapper">
         <rpg-character  seed="${item.login}"></rpg-character>
-        <div class='contdetails'>
-        ${item.login}<br>
+        <div class="contdetails">
+        ${item.login}
         Contributions: ${item.contributions}
         </div>
         </div>
