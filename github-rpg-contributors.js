@@ -9,15 +9,15 @@ import '@haxtheweb/rpg-character/rpg-character.js';
 
 
 /**
- * `project-1`
+ * `github-rpg-contributors`
  * 
  * @demo index.html
- * @element project-1
+ * @element github-rpg-contributors
  */
-export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
+export class GithubRpgContributors extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
-    return "project-1";
+    return "github-rpg-contributors";
   }
 
   constructor() {
@@ -32,13 +32,6 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
       ...this.t,
       title: "Title",
     };
-    this.registerLocalization({
-      context: this,
-      localesPath:
-        new URL("./locales/project-1.ar.json", import.meta.url).href +
-        "/../",
-      locales: ["ar", "es", "hi", "zh"],
-    });
   }
 
   // Lit reactive properties
@@ -59,8 +52,6 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
     css`
       :host {
         display: block;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
       }
       .wrapper {
@@ -68,10 +59,32 @@ export class Project1 extends DDDSuper(I18NMixin(LitElement)) {
         padding: var(--ddd-spacing-4);
       }
       h3 span {
-        font-size: var(--project-1-label-font-size, var(--ddd-font-size-s));
+        font-size: var(--github-rpg-contributors-label-font-size, var(--ddd-font-size-s));
       }
-      .rpg-wrapper {
-        display: inline-flex;
+      .rpg-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      }
+
+      .character-stuff {
+        padding: var(--ddd-spacing-3);
+        text-align: center;
+        min-width: 176px;
+      }
+
+      .contdetails {
+        display: flex;
+        flex-direction: column;
+        margin: var(--ddd-spacing-3);
+      }
+
+      .header {
+        text-align: center;
+        margin: 0 auto;
+      }
+      h3 {
+        display: inline-block;
       }
     `];
   }
@@ -96,18 +109,20 @@ getData() {
 
   render() {
     return html`
-  <div class="wrapper">
-    <h3>GitHub Repo: <a href="https://github.com/${this.org}/${this.repo}">${this.org}/${this.repo}</a></h3>
+    <div class="header">
+      <h3>GitHub Repo: <a href="https://github.com/${this.org}/${this.repo}">${this.org}/${this.repo}</a></h3>
+    </div>
     <slot></slot>
+    <div class="rpg-wrapper">
     ${this.items.filter((item, index) => index < this.limit).map((item) => 
         html`
-        <div class="rpg-wrapper">
+        <div class="character-stuff">
         <rpg-character  seed="${item.login}"></rpg-character>
-        <div class="contdetails">
-        ${item.login}
-        Contributions: ${item.contributions}
-        </div>
-        </div>
+          <div class="contdetails">
+          <a href=https://github.com/${item.login}>${item.login}</a>
+          Contributions: ${item.contributions}
+          </div>
+          </div>
         `)}
   </div>`;
   }
@@ -120,4 +135,4 @@ getData() {
   }
 }
 
-globalThis.customElements.define(Project1.tag, Project1);
+globalThis.customElements.define(GithubRpgContributors.tag, GithubRpgContributors);

@@ -1,4 +1,4 @@
-# project-1
+# github-rpg-contributors
 DDD + Lit web component based on OpenWC toolchain. This is intended to provide the following:
 - Look good via DDD, HAX design system
 - Simple, easy to read code via Lit
@@ -15,12 +15,12 @@ DDD + Lit web component based on OpenWC toolchain. This is intended to provide t
 - `npm run release` - this will build your code, update the version, and publish it to npm for others to use
 
 ## Working with your web component
-- edit `./project-1.js`
+- edit `./github-rpg-contributors.js`
 - edit your 'demo' by modifying `./index.html`
 - add dependencies using `npm install --save @whatever/repo` or editing `./package.json` directly
 - if you must reference additional non-JS files, ensure you use the `new URL('./my-file.jpg', import.meta.url).href` syntax so that it builds correctly
 - if you add additional `.js` files / web components then place them under `/lib/`
-- to improve HAX wiring edit file in `/lib/project-1.haxProperties.json`
+- to improve HAX wiring edit file in `/lib/github-rpg-contributors.haxProperties.json`
 - for i18n / internationalization efforts, see associated language `.json` files in `/locales/` as well as `/lib/` for haxProperties related translation examples.
 
 ## Recommended setup

@@ -5,7 +5,7 @@
   <base href="/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Demonstration for project-1">
+  <meta name="Description" content="Demonstration for github-rpg-contributors">
 
   <style>
     :root, html, body {
@@ -15,31 +15,35 @@
     #demo {
       margin: var(--ddd-spacing-2);
     }
-    project-1 {
+    github-rpg-contributors {
       margin: var(--ddd-spacing-2);
       border: var(--ddd-border-md);
       border-radius: var(--ddd-radius-lg);
     }
-    project-1:hover {
+    github-rpg-contributors:hover {
       box-shadow: var(--ddd-boxShadow-sm);
     }
     #example {
-      --project-1-font-size: var(--ddd-font-size-l);
+      --github-rpg-contributors-font-size: var(--ddd-font-size-l);
       background-color: var(--ddd-accent-2);
       color: var(--ddd-primary-17);
     }
+
   </style>
-  <title>project-1</title>
+  <title>github-rpg-contributors</title>
 </head>
 
 <body>
   <div id="demo">
-    <h1>project-1</h1>
-    <project-1 org="haxtheweb" repo="webcomponents" limit="10"></project-1>
-  <script type="module" src="./project-1.js"></script>
+    
+    <h1>github-rpg-contributors</h1>
+    <github-rpg-contributors org="haxtheweb" repo="webcomponents" limit="10"></github-rpg-contributors>
+    <github-rpg-contributors org="HannahMontana-ALE" repo="HannahMontana-ALE" limit="10"></github-rpg-contributors>
+  <script type="module" src="./github-rpg-contributors.js"></script>
   <!-- Take HAX, the Web and you further down the rabbit hole -->
    <!-- <div id="RPGguy">
   <rpg-character  seed="${item.login}"></rpg-character>
    </div> -->
+  </div>
 </body>
 </html>

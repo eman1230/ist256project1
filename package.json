@@ -1,7 +1,7 @@
 {
-    "name": "project-1",
+    "name": "github-rpg-contributors",
     "version": "0.0.0",
-    "description": "Webcomponent project-1 following hax / open-wc recommendations",
+    "description": "Webcomponent github-rpg-contributors following hax / open-wc recommendations",
     "license": "Apache-2.0",
     "author": {
         "name": "eman1230"
@@ -16,8 +16,8 @@
         "url": "https://github.com/eman1230/ist256project1"
     },
     "type": "module",
-    "main": "project-1.js",
-    "module": "project-1.js",
+    "main": "github-rpg-contributors.js",
+    "module": "github-rpg-contributors.js",
     "scripts": {
         "start": "web-dev-server",
         "build": "rimraf public && rollup -c rollup.config.js && npm run analyze",
